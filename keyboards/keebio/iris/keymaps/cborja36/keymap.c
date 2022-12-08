@@ -1,17 +1,51 @@
 #include QMK_KEYBOARD_H
 
+// Macro
+enum custom_keycodes {
+    ENYE = SAFE_RANGE,
+};
 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case ENYE:
+        if (record->event.pressed) {
+            // when keycode ENYE is pressed
+            SEND_STRING(SS_LALT("n")"n");
+        } else {
+            // when keycode ENYE is released
+        }
+        break;
+    }
+    return true;
+};
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+		case LT(1,KC_BSPC):
+            // Immediately select the hold action when another key is pressed.
+            return true;
+		case LT(2,KC_TAB):
+            // Immediately select the hold action when another key is pressed.
+            return true;
+		case LT(3,KC_ENT):
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[0] = LAYOUT(
-		KC_ESC, RGB_TOG, RGB_VAD, RGB_VAI, KC_BRID, KC_BRIU,                                     KC_MPLY, KC_MPRV, KC_MNXT,         KC_MUTE,        KC_VOLD, KC_VOLU,
+		LCTL(KC_UP), RGB_TOG, RGB_VAD, RGB_VAI, KC_BRID, KC_BRIU,                                     KC_MPLY, KC_MPRV, KC_MNXT,         KC_MUTE,        KC_VOLD, KC_VOLU,
 
-		KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                                       KC_J,    KC_L,    KC_U,            KC_Y,           KC_QUOT, KC_BSPC, 
-		KC_LCTL, KC_A,    KC_R,     LALT_T(KC_S),    LGUI_T(KC_T),    KC_G,                      KC_M,    LGUI_T(KC_N),    LALT_T(KC_E),    KC_I,    KC_O,    LALT(KC_E), 
-		KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_D,  KC_V, KC_NO,                  LT(3,KC_BSPC), KC_K,    KC_H,    KC_COMM,         KC_DOT,         KC_SLSH, LALT(LSFT(KC_SLSH)), 
-								MEH_T(KC_TAB), LT(1,KC_ENT), OSM(MOD_LSFT),                 LT(3,KC_BSPC), LT(2,KC_SPC), KC_DEL
+		KC_ESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                                       KC_J,    KC_L,    KC_U,            KC_Y,           ENYE, KC_QUOT, 
+		KC_LCTL, KC_A,    LSFT_T(KC_R),     LALT_T(KC_S),    LGUI_T(KC_T),    KC_G,                      KC_M,    LGUI_T(KC_N),    LALT_T(KC_E),    LSFT_T(KC_I),    KC_O,    LALT(KC_E), 
+		KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_D,  KC_V, KC_NO,                  LT(3,KC_ENT), KC_K,    KC_H,    KC_COMM,         KC_DOT,         KC_SLSH, LALT(LSFT(KC_SLSH)), 
+								KC_DEL, LT(1,KC_BSPC), MEH_T(KC_SPC),                 LT(3,KC_ENT), LT(2,KC_TAB), KC_DEL
 	),
 
 
