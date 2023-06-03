@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		LCTL(KC_UP), RGB_TOG, KC_BRID, KC_BRIU, KC_MPLY, KC_MPRV,                                KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, KC_LBRC, KC_RBRC,
 
 		KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_QUOT,
-		KC_LCTL, KC_A,    KC_S,     KC_D,    KC_F,    KC_G,                                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,    LALT(KC_K),
+		KC_LCTL, KC_A,    KC_S,     KC_D,    KC_F,    KC_G,                                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,    LALT(KC_E),
 		KC_LSFT,   KC_Z,  KC_X,    KC_C,     KC_V,     KC_B, KC_CAPS,                  LT(3,KC_ENT), KC_N,    KC_M,  KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
 							        	KC_LGUI, LT(1,KC_BSPC), KC_SPC,           LT(3,KC_ENT), LT(2,KC_TAB), KC_LALT
 	),
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                               KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT,
 
 		KC_NO, KC_LBRC, KC_7, KC_8, KC_9, KC_RBRC,                                              KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		KC_NO, KC_P, KC_4, KC_5, KC_6, KC_EQL,                                               KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_HYPR, KC_LCTL,
+		KC_NO, KC_SCLN, KC_4, KC_5, KC_6, KC_EQL,                                               KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_HYPR, KC_LCTL,
 		KC_NO, KC_PLUS, KC_1, KC_2, KC_3, KC_BSLS, KC_NO,                                 KC_NO, KC_NO, KC_NO, KC_COMM, KC_DOT, LALT(LSFT(KC_SLSH)), KC_NO,
 		                          KC_MINS, KC_0, KC_SPC,                                 KC_NO, KC_NO, KC_NO
 	),
@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                              KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 
 		KC_NO, KC_LCBR, KC_LPRN, KC_ASTR, KC_RPRN, KC_RCBR,                                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		KC_NO, LSFT(KC_P), KC_DLR, KC_PERC, KC_CIRC, KC_GRV,                                     KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_HYPR, KC_LCTL,
+		KC_NO, KC_COLN, KC_DLR, KC_PERC, KC_CIRC, KC_GRV,                                     KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_HYPR, KC_LCTL,
 		KC_NO, KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_PIPE, KC_NO,                        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 		                               KC_AMPR, QUICK_PARANTHESES, KC_UNDS,                       KC_NO, KC_NO, KC_NO
 	),
