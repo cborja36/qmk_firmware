@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_NO, KC_LBRC, KC_7, KC_8, KC_9, KC_RBRC,                                              KC_NO, KC_NO, KC_NO, KC_NO, LALT(KC_E), KC_NO,
 		KC_NO, KC_SCLN, KC_4, KC_5, KC_6, KC_EQL,                                               KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL, KC_NO,
 		KC_NO, KC_PLUS, KC_1, KC_2, KC_3, KC_BSLS,                                   KC_NO, KC_ESC, KC_COMM, KC_DOT, KC_HYPR, KC_NO,
-		                          KC_MINS, KC_0,  KC_SPC,                                 KC_NO, KC_NO, QK_BOOT
+		                          KC_MINS, KC_0,  KC_SPC,                                 KC_NO, KC_NO, KC_NO
 	),
 
 
@@ -94,13 +94,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_NO, KC_LCBR, KC_LPRN, KC_ASTR, KC_RPRN, KC_RCBR,                     KC_MPRV, KC_MNXT, KC_MPLY, KC_VOLD, KC_VOLU, KC_NO,
 		KC_NO, LSFT(KC_SCLN), KC_DLR, KC_PERC, KC_CIRC, KC_GRV,                 KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL, KC_NO,
 		KC_NO, KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_PIPE,                       KC_NO, KC_NO, KC_NO, KC_NO, KC_HYPR, KC_NO,
-		                KC_AMPR, QUICK_PARANTHESES, KC_UNDS,                    KC_NO, KC_NO, KC_NO
+		                KC_AMPR, QUICK_PARANTHESES, KC_UNDS,                    KC_NO, KC_NO, QK_BOOT
 	),
 
 	[4] = LAYOUT(
-		KC_NO, KC_TAB, KC_Q, KC_W, KC_E, KC_R,                                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		KC_NO, KC_LSFT, KC_A, KC_S, KC_D, KC_F,                                     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		KC_NO, KC_LCTL, KC_Z, KC_X, KC_C, KC_V,                          KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		                               TG(4), KC_NO, KC_SPC,                       KC_NO, KC_NO, KC_NO
+		KC_NO, KC_TAB, KC_Q, KC_W, KC_E, KC_R,                                   KC_NO, KC_NO, KC_UP, KC_NO, KC_NO,    KC_NO,
+		KC_NO, KC_LSFT, KC_A, KC_S, KC_D, KC_F,                                  KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO,    KC_NO,
+		KC_NO, KC_LCTL, KC_Z, KC_X, KC_C, KC_V,                                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO,
+		                               TG(4), KC_NO, KC_SPC,                       KC_ESC, KC_NO, KC_NO
 	),
 };

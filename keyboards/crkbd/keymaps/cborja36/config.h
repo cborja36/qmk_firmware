@@ -1,6 +1,6 @@
 // default but used in macros
 #undef TAPPING_TERM
-#define TAPPING_TERM 300
+#define TAPPING_TERM 250
 
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 #define PERMISSIVE_HOLD_PER_KEY
@@ -10,4 +10,4 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-#define USB_SUSPEND_WAKEUP_DELAY 200  // in order to prevent keybaoard not waking up
+// #define USB_SUSPEND_WAKEUP_DELAY 200  // in order to prevent keybaoard not waking up
